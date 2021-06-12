@@ -14,7 +14,6 @@ def go():
         if len(s.findChildren("span", class_ = "box--value", recursive = False)) == 1:
             # If price is >= $1, it's split into value and decimal part
             bv = s.findChildren("span", class_ = "box--value", recursive = False)[0].get_text()
-            print(bv)
             bd = s.findChildren("span", class_="box--decimal", recursive=False)[0].get_text()
             sale_item_price_list.append(bv+bd)
         else:
